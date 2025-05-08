@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -200,14 +198,7 @@ tr:hover {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+
 /* Đảm bảo hai khung có kích thước bằng nhau */
 .table-container {
   display: flex;
