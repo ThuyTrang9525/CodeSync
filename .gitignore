@@ -1,7 +1,0 @@
-
-/backend/vendor/
-/backend/storage/
-
-# System
-.DS_Store
-Thumbs.db
