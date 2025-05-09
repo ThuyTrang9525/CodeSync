@@ -7,6 +7,7 @@ import StudentManagementStudy from './pages/student/StudentManagementStudy';
 import ClassesGrid from './pages/teacher/homepage';
 import NotificationsTable from './pages/teacher/notification';
 import StudentTable from './pages/teacher/StudentList';
+import Homepage from "./pages/student/Homepage";
 import Profile from "./pages/student/profile";
 
 
@@ -46,6 +47,11 @@ const routes = [
         path: "/teacher-studentList",
         element: <StudentTable />,
         name: "Student List",
+    },
+    {
+        path: "/student-home",
+        element: <Homepage />,
+        name: "Student Home",
     },
     {
         path: "/student-profile",

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Admin/HeaderAdmin';
 import Nav from '../../components/Admin/NavAdmin';
 import TopProgressChart from '../../components/Admin/TopProgressChart';
-import '../../css/admin.css';
+import '../../assets/css/admin.css';
 import axios from 'axios';
 
 export default class AdminDashboard extends Component {
