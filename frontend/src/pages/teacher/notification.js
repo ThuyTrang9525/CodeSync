@@ -1,9 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import Header from '../../components/Teacher/Header';
 import Navigation from '../../components/Teacher/Navigation';
-// Sample notifications data
+import Header from "../../components/header"
+import Footer from "../../components/footer"
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { FaCalendarAlt } from "react-icons/fa"; 
+
 const notifications = [
   {
     id: 1,
@@ -71,36 +75,66 @@ const notifications = [
 ]
 
 export default function NotificationsTable() {
-  const [currentPage, setCurrentPage] = useState(1)
-  const [date, setDate] = useState("2024/02/27")
-  const [selectedClass, setSelectedClass] = useState("All")
+  const [currentPage, setCurrentPage] = useState(1);
+  const [date, setDate] = useState(new Date());
+  const [selectedClass, setSelectedClass] = useState("All");
+  const [openCalendar, setOpenCalendar] = useState(false);
 
-  const handleDateChange = (e) => {
-    setDate(e.target.value)
-  }
+  const toggleCalendar = () => {
+    setOpenCalendar(!openCalendar);
+  };
+
+  const handleDateChange = (newDate) => {
+    setDate(newDate);
+    setOpenCalendar(false); 
+  };
 
   const handleClassChange = (e) => {
-    setSelectedClass(e.target.value)
-  }
+    setSelectedClass(e.target.value);
+  };
+
+  const formattedDate = date.toLocaleDateString();
+  
 
   return (
     <div className="bg-white">
       <Header />
       <Navigation />
-      <div className="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div className="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 position-relative">
         <h2 className="fs-4 fw-semibold mb-0">Recent announcements</h2>
         <div className="d-flex align-items-center gap-2">
-          <select className="form-select" value={date} onChange={handleDateChange} style={{ width: "180px" }}>
-            <option value="2024/02/27">2024/02/27</option>
-            <option value="2024/02/26">2024/02/26</option>
-            <option value="2024/02/25">2024/02/25</option>
-          </select>
+        <button className="btn btn-outline-secondary" onClick={toggleCalendar}>
+        <FaCalendarAlt />
+        </button>
 
-          <select className="form-select" value={selectedClass} onChange={handleClassChange} style={{ width: "120px" }}>
-            <option value="All">All</option>
-            <option value="PNV26B">PNV26B</option>
-            <option value="PNV25A">PNV25A</option>
-          </select>
+        {openCalendar && (
+          <div className="position-absolute"
+            style={{
+              zIndex: 999,
+              top: '100%', 
+            }}>
+            <DatePicker
+              selected={date}
+              onChange={handleDateChange}
+              inline
+            />
+          </div>
+          
+        )}
+        <div className="">
+          <h10>Selected Date: {formattedDate}</h10>
+        </div>
+        
+        <select
+          className="form-select"
+          value={selectedClass}
+          onChange={handleClassChange}
+          style={{ width: "120px" }}
+        >
+          <option value="All">All</option>
+          <option value="PNV26B">PNV26B</option>
+          <option value="PNV25A">PNV25A</option>
+        </select>
         </div>
       </div>
 
@@ -147,6 +181,7 @@ export default function NotificationsTable() {
           <button className="btn btn-outline-secondary btn-sm">Next</button>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
