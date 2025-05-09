@@ -8,12 +8,11 @@ import ClassesGrid from './pages/teacher/homepage';
 import NotificationsTable from './pages/teacher/notification';
 import StudentTable from './pages/teacher/StudentList';
 import Homepage from "./pages/student/Homepage";
+import Profile from "./pages/student/profile";
+
 
 
 const routes = [
-    
-    
-    
     {
         path: "/admin-dashboard",
         element: <AdminDashboard />,
@@ -53,6 +52,11 @@ const routes = [
         path: "/student-home",
         element: <Homepage />,
         name: "Student Home",
+    },
+    {
+        path: "/student-profile",
+        element: <Profile />,
+        name: "Student Profile",
     },
     {
         path: "*",
