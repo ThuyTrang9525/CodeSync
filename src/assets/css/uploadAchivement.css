@@ -1,0 +1,138 @@
+.achievement-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+  }
+ 
+  /* Modal overlay (background dimming) */
+  .custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+    z-index: 1000;
+  }
+ 
+  /* Title */
+  .modal-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #009688;
+    margin-bottom: 8px;
+  }
+ 
+  /* Divider line */
+  .divider {
+    margin: 8px 0 16px;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+ 
+  /* Icon wrapper */
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+ 
+  /* Trophy icon */
+  .icon {
+    font-size: 40px;
+    color: #009688;
+  }
+ 
+  /* Form container */
+  .achievement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+ 
+  /* Form group */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  /* Label styles */
+  .form-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+  }
+ 
+  /* Input and textarea styles */
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+ 
+  /* Textarea specific styles */
+  .achievement-form textarea {
+    resize: none;
+  }
+ 
+  /* Input and textarea focus styles */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #009688;
+    box-shadow: 0 0 4px rgba(0, 150, 136, 0.4);
+    box-sizing: border-box;
+  }
+ 
+  /* Button container */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  /* Cancel button styles */
+  .cancel-button {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  /* Cancel button hover effect */
+  .cancel-button:hover {
+    background-color: #e0e0e0;
+  }
+ 
+  /* Save button styles */
+  .save-button {
+    padding: 8px 16px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  /* Save button hover effect */
+  .save-button:hover {
+    background-color: #00796b;
+  }
