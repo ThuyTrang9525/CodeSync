@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
-import "../assets/css/uploadAchivement.css";
+
 
 
 Modal.setAppElement('#root');

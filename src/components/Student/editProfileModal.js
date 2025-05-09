@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "react-modal";
-import "../assets/css/editProfile.css";
 import { FaUserCircle } from "react-icons/fa"; // Import icon từ React Icons
 
 
