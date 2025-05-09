@@ -4,8 +4,8 @@ import AdminDashboard from './pages/Admin/AdminDashboard';
 import AdminUser from './pages/Admin/AdminUser';
 import StudentGoal from './pages/student/StudentGoal';
 import StudentManagementStudy from './pages/student/StudentManagementStudy';
-import ClassesGrid from './pages/teacher/HomePage';
-import NotificationsTable from './pages/teacher/Notification';
+import ClassesGrid from './pages/teacher/homepage';
+import NotificationsTable from './pages/teacher/notification';
 import StudentTable from './pages/teacher/StudentList';
 
 
