@@ -3,15 +3,15 @@
 
 import React from "react"
 import GoalTracker from "../../components/Student/goal-tracker"
-import "../../css/student-goal.css";
+import "../../assets/css/student-goal.css";
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 export default function StudentGoal() {
   return (
     <div>
-      <Header />
+      
       <GoalTracker />
-      <Footer />
+      
     </div>
     
   )
