@@ -7,11 +7,17 @@ import StudentManagementStudy from './pages/student/StudentManagementStudy';
 import ClassesGrid from './pages/teacher/homepage';
 import NotificationsTable from './pages/teacher/notification';
 import StudentTable from './pages/teacher/StudentList';
+import Login from './pages/Login/Login';
+
 
 
 const routes = [
     
-    
+    {
+        path: "/Login",
+        element: <Login />,
+        name: "Login",
+    },
     
     {
         path: "/admin-dashboard",
