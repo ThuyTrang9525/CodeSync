@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import { Home, Target, Edit, Menu, Settings, HelpCircle, LogOut } from "lucide-react"
 import "../../assets/css/homepage-student.css"
 import Navbar from "../../components/Student/nav-bar"; 
+import Header from "../../components/header"
+import Footer from "../../components/footer"
 class Homepage extends Component {
     render() {
         const courses = [
@@ -10,9 +12,9 @@ class Homepage extends Component {
             { title: "TOECT", teacher: "Doan Minh Hoang" },
             { title: "Communication", teacher: "Doan Minh Hoang" },
         ]
-
         return (
             <div>
+                <Header />
                 <Navbar />
                 <h2 className="welcome-text">Welcome hoang.doan26</h2>
 
@@ -33,6 +35,7 @@ class Homepage extends Component {
                         </div>
                     ))}
                 </div>
+                <Footer />
             </div>
         )
     }
