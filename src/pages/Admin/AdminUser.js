@@ -5,6 +5,8 @@ import Button from '../../components/Admin/ButtonAddProps';
 import RoleFilter from '../../components/Admin/RoleFilter';
 import SearchForm from '../../components/Admin/SearchAdmin';
 import TitleTable from '../../components/Admin/TitleTable';
+import TableData from '../../components/Admin/TableDataUser';
+import Pagination from '../../components/Admin/Pagination';
 export default class AdminUser extends Component {
   render() {
     return (
@@ -13,22 +15,24 @@ export default class AdminUser extends Component {
 
             <Nav />
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
             <SearchForm onSearch={(query) => console.log(`Search query: ${query}`)} />
             <RoleFilter onFilterChange={(role) => console.log(`Selected role: ${role}`)} />
           </div>
 
         
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <TitleTable title="User List" />
               <Button
                 icon={<i className="fas fa-plus"></i>}
                 text="Add User"
-                onClick={() => alert('Add User Clicked')} 
               />  
             </div>       
             
+            <TableData />
 
+<Pagination />
+            
         </div>
       )
     }

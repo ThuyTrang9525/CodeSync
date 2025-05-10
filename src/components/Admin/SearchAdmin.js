@@ -117,7 +117,7 @@ const styles = {
   iconWrapper: {
     position: "absolute",
     left: "10px",
-    top: "50%",
+    top: "40%",
     transform: "translateY(-50%)",
     pointerEvents: "none",
   },
@@ -128,7 +128,7 @@ const styles = {
   },
   input: {
     width: "100%",
-    padding: "8px 40px 8px 12px",
+    padding: "10px 40px 8px 12px",
     border: "none",
     outline: "none",
     fontSize: "14px",
@@ -144,7 +144,7 @@ const styles = {
     color: "#aaa",
   },
   submitBtn: {
-    backgroundColor: "#3b82f6",
+    backgroundColor: "#009688",
     color: "white",
     padding: "8px 16px",
     border: "none",
