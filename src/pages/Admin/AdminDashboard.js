@@ -31,7 +31,6 @@ export default class AdminDashboard extends Component {
       <div className="container">
         <Header />
         <Nav />
-
         <div className="stats-grid">
           <div className="stat-card">
             <h3 className="stat-title">Total Teachers</h3>
