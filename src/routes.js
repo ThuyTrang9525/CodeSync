@@ -2,6 +2,8 @@ import React from "react";
 
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import AdminUser from './pages/Admin/AdminUser';
+import AdminClass from './pages/Admin/AdminClass';
+import AdminNotification from './pages/Admin/AdminNotification';
 import StudentGoal from './pages/student/StudentGoal';
 import StudentManagementStudy from './pages/student/StudentManagementStudy';
 import ClassesGrid from './pages/teacher/homepage';
@@ -9,10 +11,18 @@ import NotificationsTable from './pages/teacher/notification';
 import StudentTable from './pages/teacher/StudentList';
 import Homepage from "./pages/student/Homepage";
 import Profile from "./pages/student/profile";
+import Login from './pages/Login/Login';
 
 
 
 const routes = [
+    
+    {
+        path: "/Login",
+        element: <Login />,
+        name: "Login",
+    },
+    
     {
         path: "/admin-dashboard",
         element: <AdminDashboard />,
@@ -22,6 +32,16 @@ const routes = [
         path: "/admin-user",
         element: <AdminUser />,
         name: "Admin User",
+    },
+    {
+        path: "/admin-class",
+        element: <AdminClass />,
+        name: "Admin Class",
+    },
+    {
+        path: "/admin-notification",
+        element: <AdminNotification />,
+        name: "Admin Notification",
     },
     {
         path: "/student-goal",
