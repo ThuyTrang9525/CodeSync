@@ -1,10 +1,12 @@
 import { Component } from "react"
 import { Link } from "react-router-dom"
 import { Home, Target, Edit, Menu, Settings, HelpCircle, LogOut } from "lucide-react"
-import "../../assets/css/homepage-student.css"
-import Navbar from "../../components/Student/nav-bar"; 
+
 import Header from "../../components/header"
 import Footer from "../../components/footer"
+import Navbar from "../../components/Student/StudentNavBar"; 
+import "../../assets/css/StudentHomepage.css"
+
 class Homepage extends Component {
     render() {
         const courses = [
