@@ -1,5 +1,5 @@
-import StudyPlanManagement from "../../components/Student/study-plan-management"
-import "../../assets/css/student-management-study.css";
+import StudyPlanManagement from "../../components/Student/StudentStudyPlanManagement"
+import "../../assets/css/StudentManagementStudy.css";
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 export default function StudentManagementStudy() {

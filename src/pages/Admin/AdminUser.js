@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Header from '../../components/Admin/HeaderAdmin';
-import Nav from '../../components/Admin/NavAdmin';
+import Header from '../../components/Admin/AdminHeader';
+import Nav from '../../components/Admin/AdminNav';
 
 
 export default class AdminUser extends Component {
